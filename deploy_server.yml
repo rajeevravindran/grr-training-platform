@@ -1,0 +1,16 @@
+- hosts: server
+  become: true
+  
+  tasks:
+    - name: Install depedencies
+      apt:
+        pkg:
+          - debconf-utils
+          - make
+          - apache2
+          - php
+        state: present
+        update_cache: yes
+    - name: GRR Installer
+      apt:
+        deb: https://storage.googleapis.com/releases.grr-response.com/grr-server_3.4.5-1_amd64.deb

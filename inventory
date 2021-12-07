@@ -1,0 +1,9 @@
+[server]
+192.168.0.59 ansible_user=root
+
+[client-ubuntu]
+192.168.0.60
+192.168.0.61
+
+[client-windows]
+192.168.0.62
